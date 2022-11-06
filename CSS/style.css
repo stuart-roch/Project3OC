@@ -1,0 +1,13 @@
+.instructions li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.instructions li div{
+    display: flex;
+}
+.instructions ul p{
+    background-color: blueviolet;
+    color:white;
+}
