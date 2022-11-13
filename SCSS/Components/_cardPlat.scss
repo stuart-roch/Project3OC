@@ -1,0 +1,22 @@
+@import "../Utils/variables";
+@import "../Utils/mixin";
+
+.card-plat{
+    @include background($colorBgCard,95%,$borderRadius:15px);
+    @include shadow(0px 5px 15px, map-get($colorGrey,shadow));
+    h2{
+        padding:10px 10px 0;
+        margin-bottom: 0.2em;
+        font-size:16px;
+    }
+    div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 20px;
+        padding:0 10px 5px;
+    }
+    p,strong{
+        font-size:12px;
+    }
+}

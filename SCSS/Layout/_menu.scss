@@ -1,0 +1,20 @@
+@import "../Utils/variables";
+@import "../Utils/mixin";
+
+
+.menu{
+    @include background(map-get($colorGrey,light),$padding:10px 0 20px 15px,$borderRadius:40px 40px 0 0);
+    transform: translateY(-3em);
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width:95%;
+    }
+}
+
+.centrer-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

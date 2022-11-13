@@ -1,0 +1,45 @@
+@import "../Utils/variables";
+@import "../Utils/mixin";
+
+@include newFont(map-get($font,txt));
+@include newFont(map-get($font,titre));
+
+h1{
+    @include font(map-get($font,titre),map-get($fontSize,h1));
+}
+
+h2{
+    @include font(map-get($font,txt),map-get($fontSize,h2));
+}
+
+h3{
+    @include font(map-get($font,txt),map-get($fontSize,h3));
+}
+
+p,strong{
+    @include font(map-get($font,txt),map-get($fontSize,p));
+}
+
+.menu__sous-titre{
+    text-transform: uppercase;
+    &::after{
+        content:"";
+        display: block;
+        border:2px solid map-get($color,tertiary);
+        background-color: map-get($color,tertiary);
+        width:30px;
+    }
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+li{
+    list-style: none;
+}
+
+.fa-heart {
+    font-size: x-large;
+  }

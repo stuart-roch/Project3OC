@@ -1,0 +1,93 @@
+@import "../Utils/variables";
+@import "../Utils/mixin";
+
+.body-index h1{
+    font-family: map-get($font,txt);
+}
+
+.header-index{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 4px;
+    padding-bottom: 20px;
+    @include shadow(0px 5px 5px, map-get($colorGrey,shadow));
+}
+
+.location{
+    @include textCenter;
+    @include background(map-get($colorGrey,dark),100%,10px 0);
+}
+
+.description{
+    @include textCenter;
+    @include background(map-get($colorGrey,light),100%,20px 0);
+}
+
+.instructions {
+    padding:20px;
+    li{    
+
+        display: flex;
+        align-items: center;
+        @include background(map-get($colorGrey,light),90%,15px,0 0 20px,$borderRadius:15px);
+        @include shadow(0px 5px 15px, map-get($colorGrey,shadow));
+        p{
+            transform:translateX(-1.9em);
+            color:white;
+            @include background(map-get($color,primary),$padding:3px 7px,$borderRadius:20px);
+        }
+        div{
+            display:flex;
+            @include margin(0 1em 0 0);
+        }
+    }
+}
+
+.fa-mobile-screen-button{
+    @include margin(0 1.4em 0 0);
+}
+
+.fa-store{
+    @include margin(0 1em 0 0);
+}
+
+.restaurants{
+    @include background(map-get($colorGrey,light),$padding:20px,$margin:0 0 50px);
+    li{
+        @include background($colorBgCard,$margin: 0 0 30px 0,$borderRadius:20px);
+        @include shadow(0px 5px 15px, map-get($colorGrey,shadow));
+    }
+    img{
+        width:100%;
+        height: 150px;
+        border-radius: 20px 20px 0 0;
+        object-fit: cover;
+    }
+}
+
+.card-restaurant__new{
+    display: inline-block;
+    position: absolute;
+    transform: translateX(-5em);
+    color:#279E80;
+    font-weight: bold;
+    @include background(map-get($color,tertiary),$padding:5px);
+}
+
+.card-restaurant__bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.card-restaurant__text{
+    h3{
+        margin-bottom: 0.3em;
+    }
+    p{
+        margin-top: 0.3em;
+    }
+}

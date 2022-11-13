@@ -1,0 +1,36 @@
+@mixin newFont ($nameFont) {
+    @font-face {
+        font-family: $nameFont;
+        src: url("./Police/#{$nameFont}-Regular.ttf");
+        src: url("../Police/#{$nameFont}-Regular.ttf");
+    }
+}
+
+@mixin font($nameFont,$sizeFont,$colorFont:black,$styleFont:revert,$weightFont:revert){
+    font-family: $nameFont;
+    font-size: $sizeFont;
+    color: $colorFont;
+    font-style: $styleFont;
+    font-weight: $weightFont;
+}
+
+@mixin shadow($listLength,$color){
+    box-shadow: $listLength $color;
+}
+
+@mixin textCenter{
+    text-align: center;
+}
+
+@mixin background($color,$width:revert,$padding:revert,$margin:revert,$border:revert,$borderRadius:revert){
+    background-color: $color;
+    border:$border;
+    border-radius: $borderRadius;
+    padding:$padding;
+    margin:$margin;
+    width:$width;
+}
+
+@mixin margin($margin){
+    margin:$margin;
+}

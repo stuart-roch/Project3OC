@@ -1,0 +1,358 @@
+body {
+  margin: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./Police/Roboto-Regular.ttf");
+  src: url("../Police/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url("./Police/Shrikhand-Regular.ttf");
+  src: url("../Police/Shrikhand-Regular.ttf");
+}
+h1 {
+  font-family: "Shrikhand";
+  font-size: 22px;
+  color: black;
+  font-style: revert;
+  font-weight: revert;
+}
+
+h2 {
+  font-family: "Roboto";
+  font-size: 18px;
+  color: black;
+  font-style: revert;
+  font-weight: revert;
+}
+
+h3 {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: black;
+  font-style: revert;
+  font-weight: revert;
+}
+
+p, strong {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: black;
+  font-style: revert;
+  font-weight: revert;
+}
+
+.menu__sous-titre {
+  text-transform: uppercase;
+}
+.menu__sous-titre::after {
+  content: "";
+  display: block;
+  border: 2px solid #99E2D0;
+  background-color: #99E2D0;
+  width: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+.fa-heart {
+  font-size: x-large;
+}
+
+.logo {
+  width: 150px;
+}
+.logo--smaller {
+  width: 90px;
+  filter: invert(1);
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-image: linear-gradient(175deg, #FF79DA, #9356DC);
+  width: 180px;
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+  font-family: "Roboto";
+  font-size: 14px;
+  color: white;
+  font-style: revert;
+  font-weight: revert;
+  box-shadow: 0px 5px 15px #DEDEDE;
+}
+
+.btn-back {
+  background-color: white;
+  border: none;
+  border-radius: revert;
+  padding: 0 0 0 15px;
+  margin: revert;
+  width: revert;
+}
+
+.btn-like {
+  background-color: white;
+  border: none;
+  border-radius: revert;
+  padding: revert;
+  margin: revert;
+  width: revert;
+}
+.btn-like--sol {
+  display: none;
+  background-color: white;
+  border: none;
+  border-radius: revert;
+  padding: revert;
+  margin: revert;
+  width: revert;
+}
+.btn-like--sol .fa-solid {
+  display: none;
+}
+.btn-like--greybg {
+  background-color: #F7F7F7;
+  border: none;
+  border-radius: revert;
+  padding: revert;
+  margin: revert;
+  width: revert;
+}
+
+.img-restaurant {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 300px;
+}
+
+.card-plat {
+  background-color: white;
+  border: revert;
+  border-radius: 15px;
+  padding: revert;
+  margin: revert;
+  width: 95%;
+  box-shadow: 0px 5px 15px #DEDEDE;
+}
+.card-plat h2 {
+  padding: 10px 10px 0;
+  margin-bottom: 0.2em;
+  font-size: 16px;
+}
+.card-plat div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  padding: 0 10px 5px;
+}
+.card-plat p, .card-plat strong {
+  font-size: 12px;
+}
+
+.header-restaurant {
+  display: flex;
+}
+.header-restaurant div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+footer {
+  background-color: black;
+  border: revert;
+  border-radius: revert;
+  padding: revert;
+  margin: revert;
+  width: revert;
+  transform: translateY(-3em);
+  position: absolute;
+  width: 100%;
+}
+footer p, footer strong {
+  color: white;
+  margin: 0.5em 0;
+}
+footer div {
+  margin: 0.5em 0;
+}
+
+.footer-div {
+  padding: 20px;
+  margin: 0;
+}
+
+.fa-utensils {
+  color: white;
+  margin: 0 0.7em 0 0;
+}
+
+.fa-handshake-simple {
+  color: white;
+  transform: rotate(-45deg);
+  margin: 0 0.3em 0 0;
+}
+
+.menu {
+  background-color: #F7F7F7;
+  border: revert;
+  border-radius: 40px 40px 0 0;
+  padding: 10px 0 20px 15px;
+  margin: revert;
+  width: revert;
+  transform: translateY(-3em);
+}
+.menu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+}
+
+.centrer-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body-index h1 {
+  font-family: "Roboto";
+}
+
+.header-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 4px;
+  padding-bottom: 20px;
+  box-shadow: 0px 5px 5px #DEDEDE;
+}
+
+.location {
+  text-align: center;
+  background-color: #EAEAEA;
+  border: revert;
+  border-radius: revert;
+  padding: 10px 0;
+  margin: revert;
+  width: 100%;
+}
+
+.description {
+  text-align: center;
+  background-color: #F7F7F7;
+  border: revert;
+  border-radius: revert;
+  padding: 20px 0;
+  margin: revert;
+  width: 100%;
+}
+
+.instructions {
+  padding: 20px;
+}
+.instructions li {
+  display: flex;
+  align-items: center;
+  background-color: #F7F7F7;
+  border: revert;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 0 0 20px;
+  width: 90%;
+  box-shadow: 0px 5px 15px #DEDEDE;
+}
+.instructions li p {
+  transform: translateX(-1.9em);
+  color: white;
+  background-color: #9356DC;
+  border: revert;
+  border-radius: 20px;
+  padding: 3px 7px;
+  margin: revert;
+  width: revert;
+}
+.instructions li div {
+  display: flex;
+  margin: 0 1em 0 0;
+}
+
+.fa-mobile-screen-button {
+  margin: 0 1.4em 0 0;
+}
+
+.fa-store {
+  margin: 0 1em 0 0;
+}
+
+.restaurants {
+  background-color: #F7F7F7;
+  border: revert;
+  border-radius: revert;
+  padding: 20px;
+  margin: 0 0 50px;
+  width: revert;
+}
+.restaurants li {
+  background-color: white;
+  border: revert;
+  border-radius: 20px;
+  padding: revert;
+  margin: 0 0 30px 0;
+  width: revert;
+  box-shadow: 0px 5px 15px #DEDEDE;
+}
+.restaurants img {
+  width: 100%;
+  height: 150px;
+  border-radius: 20px 20px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-restaurant__new {
+  display: inline-block;
+  position: absolute;
+  transform: translateX(-5em);
+  color: #279E80;
+  font-weight: bold;
+  background-color: #99E2D0;
+  border: revert;
+  border-radius: revert;
+  padding: 5px;
+  margin: revert;
+  width: revert;
+}
+
+.card-restaurant__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.card-restaurant__text h3 {
+  margin-bottom: 0.3em;
+}
+.card-restaurant__text p {
+  margin-top: 0.3em;
+}/*# sourceMappingURL=main.css.map */

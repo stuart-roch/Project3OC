@@ -1,0 +1,9 @@
+.logo{
+    width:150px;
+    &--smaller{
+        width:90px;
+        filter:invert(1);
+        margin-bottom: 10px;
+    }
+}
+
