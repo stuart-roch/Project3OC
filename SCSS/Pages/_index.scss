@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 25px;
+    padding-top:25px;
     margin-bottom: 4px;
     padding-bottom: 20px;
     @include shadow(0px 5px 5px, map-get($colorGrey,shadow));
@@ -27,12 +27,32 @@
 
 .instructions {
     padding:20px;
+    h2{
+        @include desktopOnly{
+            @include margin(20px 0 20px 15px);
+        }
+    }
+    ul{
+        @include tabletteOnly{
+            display:flex;
+        }
+        @include desktopOnly{
+            @include margin(0 30px);
+        }
+    }
     li{    
-
         display: flex;
         align-items: center;
         @include background(map-get($colorGrey,light),90%,15px,0 0 20px,$borderRadius:15px);
         @include shadow(0px 5px 15px, map-get($colorGrey,shadow));
+        @include tabletteOnly{
+            flex: 0 1 30%;
+            white-space: nowrap;
+            @include margin(0 8px 20px);
+        }
+        @include desktopOnly{
+            @include margin(0 20px 20px);
+        }
         p{
             transform:translateX(-1.9em);
             color:white;
@@ -55,9 +75,29 @@
 
 .restaurants{
     @include background(map-get($colorGrey,light),$padding:20px,$margin:0 0 50px);
+    @include desktopOnly{
+        border-radius: 20px;
+        @include margin(0 20px 80px);
+    }
+    ul{
+        @include tabletteOnly{
+            display:flex;
+            flex-wrap: wrap;
+        }
+        @include desktopOnly{
+            flex-wrap: nowrap;
+        }
+    }
     li{
         @include background($colorBgCard,$margin: 0 0 30px 0,$borderRadius:20px);
         @include shadow(0px 5px 15px, map-get($colorGrey,shadow));
+        @include tabletteOnly{
+            flex:0 1 44%;
+            @include margin(0 20px 30px);
+        }
+        @include desktopOnly{
+            flex:0 1 23%;
+        }
     }
     img{
         width:100%;

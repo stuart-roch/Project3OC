@@ -1,3 +1,5 @@
+@import "../Utils/variables";
+
 @mixin newFont ($nameFont) {
     @font-face {
         font-family: $nameFont;
@@ -33,4 +35,16 @@
 
 @mixin margin($margin){
     margin:$margin;
+}
+
+@mixin tabletteOnly{
+    @media screen and (min-width:map-get($minWidth,tablette)){
+        @content;
+    }
+}
+
+@mixin desktopOnly{
+    @media screen and (min-width:map-get($minWidth,desktop)){
+        @content;
+    }
 }

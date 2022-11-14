@@ -1,6 +1,12 @@
 body {
   margin: 0;
 }
+@media screen and (min-width: 1024px) {
+  body {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+}
 
 ul {
   padding-left: 0;
@@ -75,10 +81,28 @@ li {
 .logo {
   width: 150px;
 }
+@media screen and (min-width: 1024px) {
+  .logo {
+    width: 20%;
+  }
+}
 .logo--smaller {
   width: 90px;
   filter: invert(1);
   margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .logo--smaller {
+    margin-bottom: 0;
+    flex: 0 0 15%;
+    height: 25px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .logo--smaller {
+    flex: 0 0 10%;
+    height: 30px;
+  }
 }
 
 .btn {
@@ -108,29 +132,72 @@ li {
   background-color: white;
   border: none;
   border-radius: revert;
-  padding: revert;
+  padding: 0;
   margin: revert;
   width: revert;
+  position: absolute;
+  z-index: 1;
+}
+.btn-like:hover {
+  opacity: 0;
+}
+.btn-like:hover + .btn-like--sol .fa-solid, .btn-like + .btn-like--sol {
+  opacity: 1;
+  transform: scaleY(1);
 }
 .btn-like--sol {
-  display: none;
+  opacity: 0;
   background-color: white;
   border: none;
   border-radius: revert;
-  padding: revert;
+  padding: 0;
   margin: revert;
   width: revert;
 }
 .btn-like--sol .fa-solid {
-  display: none;
+  opacity: 0;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(45deg, #FF79DA, #9356DC);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 1000ms ease-in-out;
+}
+.btn-like--solgreybg {
+  background-color: #F7F7F7;
+  border: none;
+  border-radius: revert;
+  padding: 0;
+  margin: revert;
+  width: revert;
+}
+.btn-like--solgreybg .fa-solid {
+  opacity: 0;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(45deg, #FF79DA, #9356DC);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 1000ms ease-in-out;
 }
 .btn-like--greybg {
   background-color: #F7F7F7;
   border: none;
   border-radius: revert;
-  padding: revert;
+  padding: 0;
   margin: revert;
   width: revert;
+  position: absolute;
+  z-index: 1;
+}
+.btn-like--greybg:hover {
+  opacity: 0;
+}
+.btn-like--greybg:hover + .btn-like--solgreybg .fa-solid, .btn-like--greybg + .btn-like--solgreybg {
+  opacity: 1;
+  transform: scaleY(1);
 }
 
 .img-restaurant {
@@ -186,6 +253,7 @@ footer {
   transform: translateY(-3em);
   position: absolute;
   width: 100%;
+  max-width: 1920px;
 }
 footer p, footer strong {
   color: white;
@@ -198,6 +266,14 @@ footer div {
 .footer-div {
   padding: 20px;
   margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .footer-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+  }
 }
 
 .fa-utensils {
@@ -226,11 +302,33 @@ footer div {
   align-items: center;
   width: 95%;
 }
+@media screen and (min-width: 768px) {
+  .menu ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu ul {
+    flex-wrap: nowrap;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu li {
+    flex: 0 1 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu li {
+    flex: 0 1 33%;
+  }
+}
 
 .centrer-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 30px 0 15px;
 }
 
 .body-index h1 {
@@ -241,7 +339,7 @@ footer div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 25px;
+  padding-top: 25px;
   margin-bottom: 4px;
   padding-bottom: 20px;
   box-shadow: 0px 5px 5px #DEDEDE;
@@ -270,6 +368,21 @@ footer div {
 .instructions {
   padding: 20px;
 }
+@media screen and (min-width: 1024px) {
+  .instructions h2 {
+    margin: 20px 0 20px 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .instructions ul {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .instructions ul {
+    margin: 0 30px;
+  }
+}
 .instructions li {
   display: flex;
   align-items: center;
@@ -280,6 +393,18 @@ footer div {
   margin: 0 0 20px;
   width: 90%;
   box-shadow: 0px 5px 15px #DEDEDE;
+}
+@media screen and (min-width: 768px) {
+  .instructions li {
+    flex: 0 1 30%;
+    white-space: nowrap;
+    margin: 0 8px 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .instructions li {
+    margin: 0 20px 20px;
+  }
 }
 .instructions li p {
   transform: translateX(-1.9em);
@@ -312,6 +437,23 @@ footer div {
   margin: 0 0 50px;
   width: revert;
 }
+@media screen and (min-width: 1024px) {
+  .restaurants {
+    border-radius: 20px;
+    margin: 0 20px 80px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .restaurants ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurants ul {
+    flex-wrap: nowrap;
+  }
+}
 .restaurants li {
   background-color: white;
   border: revert;
@@ -320,6 +462,17 @@ footer div {
   margin: 0 0 30px 0;
   width: revert;
   box-shadow: 0px 5px 15px #DEDEDE;
+}
+@media screen and (min-width: 768px) {
+  .restaurants li {
+    flex: 0 1 44%;
+    margin: 0 20px 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurants li {
+    flex: 0 1 23%;
+  }
 }
 .restaurants img {
   width: 100%;

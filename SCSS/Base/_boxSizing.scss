@@ -1,5 +1,11 @@
+
+
 body{
     margin:0;
+    @include desktopOnly{
+        max-width: map-get($maxWidth,desktop);
+        margin:0 auto;
+    }
 }
 
 ul{
