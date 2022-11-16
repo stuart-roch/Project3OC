@@ -27,9 +27,6 @@
             display:flex;
             flex-wrap: wrap;
         }
-        @include desktopOnly{
-            flex-wrap: nowrap;
-        }
     }
     li{
         @include tabletteOnly{
