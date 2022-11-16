@@ -2,21 +2,77 @@
 @import "../Utils/mixin";
 
 .card-plat{
-    @include background($colorBgCard,95%,$borderRadius:15px);
+    @include background($colorBgCard,95%,$margin:15px 0,$borderRadius:15px);
     @include shadow(0px 5px 15px, map-get($colorGrey,shadow));
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    
     h2{
-        padding:10px 10px 0;
+        padding:0 10px 0;
         margin-bottom: 0.2em;
         font-size:16px;
     }
-    div{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 20px;
-        padding:0 10px 5px;
-    }
+
     p,strong{
         font-size:12px;
+    }
+    &:hover .card-plat__prix{
+        transform:translateX(-3rem);
+    }
+    &:hover .check{
+        transform:scaleX(1);
+    }
+
+    &:hover .fa-circle-check{
+        transform: rotate(0deg);
+    }
+    &:hover .card-plat__titre ,&:hover .card-plat__sous-titre{
+        animation: rogner 0.1s 0.5s ease-in-out both;
+    }
+}
+.card-plat__txt{
+    width:100%;
+}
+.card-plat__bottom-txt{
+    display: flex;
+    align-items: center;
+    height: 20px;
+    padding:0 10px 5px;
+}
+.card-plat__prix{
+    position: absolute;
+    right:1rem;
+    transition:transform 1s ease-in-out;
+}
+
+.check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    @include background(map-get($color,tertiary),60px,$borderRadius:0 15px 15px 0);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition:transform 1s ease-in-out;
+}
+
+.fa-circle-check{
+    color:white;
+    transform: rotate(180deg);
+    transition: transform 0.5s 0.3s ease-in-out;
+}
+@keyframes rogner{
+    0%{
+        max-width: 100%;
+    }
+
+    100%{
+        max-width: 70%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 }

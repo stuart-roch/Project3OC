@@ -118,6 +118,10 @@ li {
   font-weight: revert;
   box-shadow: 0px 5px 15px #DEDEDE;
 }
+.btn:hover {
+  box-shadow: 0px 5px 0px #ababab;
+  background-image: linear-gradient(175deg, #fface8, #ae80e5);
+}
 
 .btn-back {
   background-color: white;
@@ -212,26 +216,99 @@ li {
   border: revert;
   border-radius: 15px;
   padding: revert;
-  margin: revert;
+  margin: 15px 0;
   width: 95%;
   box-shadow: 0px 5px 15px #DEDEDE;
-}
-.card-plat h2 {
-  padding: 10px 10px 0;
-  margin-bottom: 0.2em;
-  font-size: 16px;
-}
-.card-plat div {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 20px;
-  padding: 0 10px 5px;
+  position: relative;
+}
+.card-plat h2 {
+  padding: 0 10px 0;
+  margin-bottom: 0.2em;
+  font-size: 16px;
 }
 .card-plat p, .card-plat strong {
   font-size: 12px;
 }
+.card-plat:hover .card-plat__prix {
+  transform: translateX(-3rem);
+}
+.card-plat:hover .check {
+  transform: scaleX(1);
+}
+.card-plat:hover .fa-circle-check {
+  transform: rotate(0deg);
+}
+.card-plat:hover .card-plat__titre, .card-plat:hover .card-plat__sous-titre {
+  -webkit-animation: rogner 0.1s 0.5s ease-in-out both;
+          animation: rogner 0.1s 0.5s ease-in-out both;
+}
 
+.card-plat__txt {
+  width: 100%;
+}
+
+.card-plat__bottom-txt {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 10px 5px;
+}
+
+.card-plat__prix {
+  position: absolute;
+  right: 1rem;
+  transition: transform 1s ease-in-out;
+}
+
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  background-color: #99E2D0;
+  border: revert;
+  border-radius: 0 15px 15px 0;
+  padding: revert;
+  margin: revert;
+  width: 60px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 1s ease-in-out;
+}
+
+.fa-circle-check {
+  color: white;
+  transform: rotate(180deg);
+  transition: transform 0.5s 0.3s ease-in-out;
+}
+
+@-webkit-keyframes rogner {
+  0% {
+    max-width: 100%;
+  }
+  100% {
+    max-width: 70%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+@keyframes rogner {
+  0% {
+    max-width: 100%;
+  }
+  100% {
+    max-width: 70%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
 .header-restaurant {
   display: flex;
 }
@@ -302,6 +379,18 @@ footer div {
   align-items: center;
   width: 95%;
 }
+.menu__entree {
+  -webkit-animation: apparition 1.5s ease-in-out both;
+          animation: apparition 1.5s ease-in-out both;
+}
+.menu__plat {
+  -webkit-animation: apparition 1.5s 0.5s ease-in-out both;
+          animation: apparition 1.5s 0.5s ease-in-out both;
+}
+.menu__dessert {
+  -webkit-animation: apparition 1.5s 1s ease-in-out both;
+          animation: apparition 1.5s 1s ease-in-out both;
+}
 @media screen and (min-width: 768px) {
   .menu ul {
     display: flex;
@@ -331,8 +420,54 @@ footer div {
   margin: 30px 0 15px;
 }
 
+@-webkit-keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .body-index h1 {
   font-family: "Roboto";
+}
+
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1;
+  font-size: 50px;
+  -webkit-animation: disparition 1s 2s ease-out both;
+          animation: disparition 1s 2s ease-out both;
+}
+.loader .primary-color {
+  color: #9356DC;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -webkit-animation: loader 3s ease-in-out both;
+          animation: loader 3s ease-in-out both;
+  z-index: 2;
+}
+.loader .secondary-color {
+  color: #FF79DA;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -webkit-animation: loaderReverse 2.5s 0.5s ease-in-out both;
+          animation: loaderReverse 2.5s 0.5s ease-in-out both;
+  z-index: 1;
 }
 
 .header-index {
@@ -508,4 +643,66 @@ footer div {
 }
 .card-restaurant__text p {
   margin-top: 0.3em;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes loaderReverse {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-180deg);
+  }
+}
+@keyframes loaderReverse {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-180deg);
+  }
+}
+@-webkit-keyframes disparition {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: top left;
+  }
+}
+@keyframes disparition {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: top left;
+  }
 }/*# sourceMappingURL=main.css.map */

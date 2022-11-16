@@ -5,6 +5,32 @@
     font-family: map-get($font,txt);
 }
 
+.loader{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1;
+    font-size: 50px;
+    animation: disparition 1s 2s ease-out both;
+    .primary-color{
+        color: map-get($color,primary);
+        position: absolute;
+        top:50%;
+        right: 50%;
+        animation: loader 3s ease-in-out both;
+        z-index: 2;
+    }
+
+    .secondary-color{
+        color: map-get($color,secondary);
+        position: absolute;
+        top:50%;
+        right: 50%;
+        animation: loaderReverse 2.5s 0.5s ease-in-out both;
+        z-index: 1;
+    }
+}
 .header-index{
     display: flex;
     flex-direction: column;
@@ -129,5 +155,40 @@
     }
     p{
         margin-top: 0.3em;
+    }
+}
+
+@keyframes loader{
+    0%{
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+
+    100%{
+        opacity:0;
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes loaderReverse {
+    0% {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(-180deg);
+    }
+}
+
+@keyframes disparition{
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: top left;
     }
 }
