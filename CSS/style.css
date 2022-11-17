@@ -309,30 +309,6 @@ li {
     text-overflow: ellipsis;
   }
 }
-@media screen and (min-width: 1024px) {
-  @-webkit-keyframes rogner {
-    0% {
-      max-width: 100%;
-    }
-    100% {
-      max-width: 75%;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    }
-  }
-  @keyframes rogner {
-    0% {
-      max-width: 100%;
-    }
-    100% {
-      max-width: 75%;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    }
-  }
-}
 .header-restaurant {
   display: flex;
   align-items: center;
@@ -587,7 +563,7 @@ footer div {
   border: revert;
   border-radius: revert;
   padding: 20px;
-  margin: 0 0 50px;
+  margin: revert;
   width: revert;
 }
 @media screen and (min-width: 1024px) {

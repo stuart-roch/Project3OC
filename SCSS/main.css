@@ -563,7 +563,7 @@ footer div {
   border: revert;
   border-radius: revert;
   padding: 20px;
-  margin: 0 0 50px;
+  margin: revert;
   width: revert;
 }
 @media screen and (min-width: 1024px) {

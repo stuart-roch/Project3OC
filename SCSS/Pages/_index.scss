@@ -100,7 +100,7 @@
 }
 
 .restaurants{
-    @include background(map-get($colorGrey,light),$padding:20px,$margin:0 0 50px);
+    @include background(map-get($colorGrey,light),$padding:20px);
     @include desktopOnly{
         border-radius: 20px;
         @include margin(0 20px 80px);
