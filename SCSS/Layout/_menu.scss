@@ -3,8 +3,8 @@
 
 
 .menu{
-    @include background(map-get($colorGrey,light),$padding:10px 0 20px 15px,$borderRadius:40px 40px 0 0);
-    transform: translateY(-3em);
+    @include background(map-get($colorGrey,light),$margin: -120px 0 0 0,$padding:10px 0 20px 15px,$borderRadius:40px 40px 0 0);
+    position: relative;
     &__header{
         display: flex;
         justify-content: space-between;

@@ -311,6 +311,7 @@ li {
 }
 .header-restaurant {
   display: flex;
+  align-items: center;
 }
 .header-restaurant div {
   display: flex;
@@ -327,8 +328,6 @@ footer {
   padding: revert;
   margin: revert;
   width: revert;
-  transform: translateY(-3em);
-  position: absolute;
   width: 100%;
   max-width: 1920px;
 }
@@ -369,9 +368,9 @@ footer div {
   border: revert;
   border-radius: 40px 40px 0 0;
   padding: 10px 0 20px 15px;
-  margin: revert;
+  margin: -120px 0 0 0;
   width: revert;
-  transform: translateY(-3em);
+  position: relative;
 }
 .menu__header {
   display: flex;
