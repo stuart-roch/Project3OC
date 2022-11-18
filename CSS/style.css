@@ -119,8 +119,8 @@ li {
   box-shadow: 0px 5px 15px #DEDEDE;
 }
 .btn:hover {
-  box-shadow: 0px 5px 0px #ababab;
-  background-image: linear-gradient(175deg, #fface8, #ae80e5);
+  box-shadow: 0px 5px 5px #ababab;
+  background-image: linear-gradient(175deg, #ff93e1, #a16be0);
 }
 
 .btn-back {
@@ -141,6 +141,8 @@ li {
   width: revert;
   position: absolute;
   z-index: 1;
+  opacity: 1;
+  transition: opacity 1s 0.5s ease-in-out;
 }
 .btn-like:hover {
   opacity: 0;
@@ -166,7 +168,7 @@ li {
   background-image: linear-gradient(45deg, #FF79DA, #9356DC);
   transform: scaleY(0);
   transform-origin: bottom;
-  transition: transform 1000ms ease-in-out;
+  transition: all 1000ms ease-in-out;
 }
 .btn-like--solgreybg {
   background-color: #F7F7F7;
@@ -184,7 +186,7 @@ li {
   background-image: linear-gradient(45deg, #FF79DA, #9356DC);
   transform: scaleY(0);
   transform-origin: bottom;
-  transition: transform 1000ms ease-in-out;
+  transition: all 1000ms ease-in-out;
 }
 .btn-like--greybg {
   background-color: #F7F7F7;
@@ -195,6 +197,8 @@ li {
   width: revert;
   position: absolute;
   z-index: 1;
+  opacity: 1;
+  transition: opacity 1s 0.5s ease-in-out;
 }
 .btn-like--greybg:hover {
   opacity: 0;
@@ -344,7 +348,7 @@ footer div {
   border: revert;
   border-radius: 40px 40px 0 0;
   padding: 10px 0 20px 15px;
-  margin: -120px 0 0 0;
+  margin: -80px 0 0 0;
   width: revert;
   position: relative;
 }

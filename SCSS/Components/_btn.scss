@@ -10,8 +10,8 @@
     @include font(map-get($font,txt),map-get($fontSize,p),white);
     @include shadow(0px 5px 15px, map-get($colorGrey,shadow));
     &:hover{
-        @include shadow(0px 5px 0px, darken(map-get($colorGrey,shadow),20%));
-        background-image: linear-gradient(175deg,lighten(map-get($color,secondary),10%),lighten(map-get($color,primary),10%));
+        @include shadow(0px 5px 5px, darken(map-get($colorGrey,shadow),20%));
+        background-image: linear-gradient(175deg,lighten(map-get($color,secondary),5%),lighten(map-get($color,primary),5%));
     }
 }
 
@@ -23,6 +23,8 @@
     @include background(white,$padding:0,$border:none);
     position: absolute;
     z-index: 1;
+    opacity: 1;
+    transition: opacity 1s 0.5s ease-in-out;
     &:hover{
         opacity:0;
     }
@@ -41,7 +43,7 @@
             background-image: linear-gradient(45deg, map-get($color,secondary),map-get($color,primary));
             transform:scaleY(0);
             transform-origin: bottom;
-            transition:transform 1000ms ease-in-out;
+            transition:all 1000ms ease-in-out;
         }
         &greybg{
             @include background(map-get($colorGrey,light),$padding:0,$border:none);
@@ -53,7 +55,7 @@
                 background-image: linear-gradient(45deg, map-get($color,secondary),map-get($color,primary));
                 transform:scaleY(0);
                 transform-origin: bottom;
-                transition:transform 1000ms ease-in-out;
+                transition:all 1000ms ease-in-out;
             }
         }
     }
@@ -61,6 +63,8 @@
         @include background(map-get($colorGrey,light),$padding:0,$border:none);
         position: absolute;
         z-index: 1;
+        opacity: 1;
+        transition: opacity 1s 0.5s ease-in-out;
         &:hover{
             opacity: 0;
         }

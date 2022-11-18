@@ -3,7 +3,7 @@
 
 
 .menu{
-    @include background(map-get($colorGrey,light),$margin: -120px 0 0 0,$padding:10px 0 20px 15px,$borderRadius:40px 40px 0 0);
+    @include background(map-get($colorGrey,light),$margin: -80px 0 0 0,$padding:10px 0 20px 15px,$borderRadius:40px 40px 0 0);
     position: relative;
     &__header{
         display: flex;
