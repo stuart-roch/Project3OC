@@ -6,13 +6,17 @@
 }
 
 .loader{
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
-    background-color: black;
-    z-index: 1;
+    background-color: map-get($map: $colorGrey, $key: light);
+    z-index: 999;
     font-size: 50px;
     animation: disparition 1s 2s ease-out both;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     .primary-color{
         color: map-get($color,primary);
         position: absolute;
