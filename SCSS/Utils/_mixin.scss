@@ -16,15 +16,8 @@
     font-weight: $weightFont;
 }
 
-@mixin shadow($listLength,$color){
-    box-shadow: $listLength $color;
-}
 
-@mixin textCenter{
-    text-align: center;
-}
-
-@mixin background($color,$width:revert,$padding:revert,$margin:revert,$border:revert,$borderRadius:revert){
+@mixin backgroundColorAndShape($color,$width:revert,$padding:revert,$margin:revert,$border:revert,$borderRadius:revert){
     background-color: $color;
     border:$border;
     border-radius: $borderRadius;
@@ -33,9 +26,6 @@
     width:$width;
 }
 
-@mixin margin($margin){
-    margin:$margin;
-}
 
 @mixin tabletteOnly{
     @media screen and (min-width:map-get($minWidth,tablette)){

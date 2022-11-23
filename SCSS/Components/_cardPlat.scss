@@ -2,8 +2,8 @@
 @import "../Utils/mixin";
 
 .card-plat{
-    @include background($colorBgCard,95%,$margin:15px 0,$borderRadius:15px);
-    @include shadow(0px 5px 15px, map-get($colorGrey,shadow));
+    @include backgroundColorAndShape($colorBgCard,95%,$margin:15px 0,$borderRadius:15px);
+    box-shadow:map-get($shadowCard,listLength) map-get($shadowCard,color);
     display: flex;
     overflow: hidden;
     
@@ -52,7 +52,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @include background(map-get($color,tertiary),$borderRadius:0 15px 15px 0);
+    @include backgroundColorAndShape(map-get($color,tertiary),$borderRadius:0 15px 15px 0);
     flex:0 0 15%;
 
 }

@@ -8,19 +8,19 @@
     border:none;
     padding:10px;
     @include font(map-get($font,txt),map-get($fontSize,p),white);
-    @include shadow(0px 5px 15px, map-get($colorGrey,shadow));
+    box-shadow:0px 5px 15px map-get($colorGrey,shadow);
     &:hover{
-        @include shadow(0px 5px 5px, darken(map-get($colorGrey,shadow),20%));
+        box-shadow:0px 5px 5px darken(map-get($colorGrey,shadow),20%);
         background-image: linear-gradient(175deg,lighten(map-get($color,secondary),5%),lighten(map-get($color,primary),5%));
     }
 }
 
 .btn-back{
-    @include background(white,$padding:0 0 0 15px,$border:none);
+    @include backgroundColorAndShape(white,$padding:0 0 0 15px,$border:none);
 }
 
 .btn-like{
-    @include background(white,$padding:0,$border:none);
+    @include backgroundColorAndShape(white,$padding:0,$border:none);
     position: absolute;
     z-index: 1;
     opacity: 1;
@@ -34,7 +34,7 @@
     }
     &--sol{
         opacity: 0;
-        @include background(white,$padding:0,$border:none);
+        @include backgroundColorAndShape(white,$padding:0,$border:none);
         .fa-solid{
             opacity: 0;
             color:transparent;
@@ -46,7 +46,7 @@
             transition:all 1000ms ease-in-out;
         }
         &greybg{
-            @include background(map-get($colorGrey,light),$padding:0,$border:none);
+            @include backgroundColorAndShape(map-get($colorGrey,light),$padding:0,$border:none);
             .fa-solid{
                 opacity: 0;
                 color:transparent;
@@ -60,7 +60,7 @@
         }
     }
     &--greybg{
-        @include background(map-get($colorGrey,light),$padding:0,$border:none);
+        @include backgroundColorAndShape(map-get($colorGrey,light),$padding:0,$border:none);
         position: absolute;
         z-index: 1;
         opacity: 1;

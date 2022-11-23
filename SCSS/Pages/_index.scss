@@ -21,7 +21,7 @@
         color: map-get($color,primary);
         position: absolute;
         top:50%;
-        right: 50%;
+        left: 50%;
         animation: loader 3s ease-in-out both;
         z-index: 2;
     }
@@ -30,7 +30,7 @@
         color: map-get($color,secondary);
         position: absolute;
         top:50%;
-        right: 50%;
+        left: 50%;
         animation: loaderReverse 2.5s 0.5s ease-in-out both;
         z-index: 1;
     }
@@ -42,24 +42,24 @@
     padding-top:25px;
     margin-bottom: 4px;
     padding-bottom: 20px;
-    @include shadow(0px 5px 5px, map-get($colorGrey,shadow));
+    box-shadow:0px 5px 5px map-get($colorGrey,shadow);
 }
 
 .location{
-    @include textCenter;
-    @include background(map-get($colorGrey,dark),100%,10px 0);
+    text-align: center;
+    @include backgroundColorAndShape(map-get($colorGrey,dark),100%,10px 0);
 }
 
 .description{
-    @include textCenter;
-    @include background(map-get($colorGrey,light),100%,20px 0);
+    text-align: center;
+    @include backgroundColorAndShape(map-get($colorGrey,light),100%,20px 0);
 }
 
 .instructions {
     padding:20px;
     h2{
         @include desktopOnly{
-            @include margin(20px 0 20px 15px);
+            margin:20px 0 20px 15px;
         }
     }
     ul{
@@ -67,47 +67,47 @@
             display:flex;
         }
         @include desktopOnly{
-            @include margin(0 30px);
+            margin:0 30px;
         }
     }
-    li{    
+    li{
         display: flex;
         align-items: center;
-        @include background(map-get($colorGrey,light),90%,15px,0 0 20px,$borderRadius:15px);
-        @include shadow(0px 5px 15px, map-get($colorGrey,shadow));
+        @include backgroundColorAndShape(map-get($colorGrey,light),90%,15px,0 0 20px,$borderRadius:15px);
+        box-shadow:map-get($shadowCard,listLength) map-get($shadowCard,color);
         @include tabletteOnly{
             flex: 0 1 30%;
             white-space: nowrap;
-            @include margin(0 8px 20px);
+            margin:0 8px 20px;
         }
         @include desktopOnly{
-            @include margin(0 20px 20px);
+            margin:0 20px 20px;
         }
         p{
             transform:translateX(-1.9em);
             color:white;
-            @include background(map-get($color,primary),$padding:3px 7px,$borderRadius:20px);
+            @include backgroundColorAndShape(map-get($color,primary),$padding:3px 7px,$borderRadius:20px);
         }
         div{
             display:flex;
-            @include margin(0 1em 0 0);
+            margin:0 1em 0 0;
         }
     }
 }
 
 .fa-mobile-screen-button{
-    @include margin(0 1.4em 0 0);
+    margin:0 1.4em 0 0;
 }
 
 .fa-store{
-    @include margin(0 1em 0 0);
+    margin:0 1em 0 0;
 }
 
 .restaurants{
-    @include background(map-get($colorGrey,light),$padding:20px);
+    @include backgroundColorAndShape(map-get($colorGrey,light),$padding:20px);
     @include desktopOnly{
         border-radius: 20px;
-        @include margin(0 20px 80px);
+        margin:0 20px 80px;
     }
     ul{
         @include tabletteOnly{
@@ -119,11 +119,11 @@
         }
     }
     li{
-        @include background($colorBgCard,$margin: 0 0 30px 0,$borderRadius:20px);
-        @include shadow(0px 5px 15px, map-get($colorGrey,shadow));
+        @include backgroundColorAndShape($colorBgCard,$margin: 0 0 30px 0,$borderRadius:20px);
+        box-shadow:map-get($shadowCard,listLength) map-get($shadowCard,color);
         @include tabletteOnly{
             flex:0 1 44%;
-            @include margin(0 20px 30px);
+            margin:0 20px 30px;
         }
         @include desktopOnly{
             flex:0 1 23%;
@@ -143,7 +143,7 @@
     transform: translateX(-5em);
     color:#279E80;
     font-weight: bold;
-    @include background(map-get($color,tertiary),$padding:5px);
+    @include backgroundColorAndShape(map-get($color,tertiary),$padding:5px);
 }
 
 .card-restaurant__bottom{

@@ -2,15 +2,14 @@
 @import "../Utils/mixin";
 
 footer{
-    @include background($colorBgFooter);
+    @include backgroundColorAndShape($colorBgFooter);
     width:100%;
-    max-width:map-get($maxWidth,desktop);
     p,strong{
         color:white;
-        @include margin(0.5em 0);
+        margin:0.5em 0;
     }
     div{
-        @include margin(0.5em 0);
+        margin:0.5em 0;
     }
 }
 .footer-div{
@@ -26,11 +25,10 @@ footer{
 }
 .fa-utensils{
     color:white;
-    @include margin(0 0.7em 0 0);
+    margin:0 0.7em 0 0;
 }
 .fa-handshake-simple{
     color:white;
     transform: rotate(-45deg);
-    @include margin(0 0.3em 0 0);
+    margin:0 0.3em 0 0;
 }
-
